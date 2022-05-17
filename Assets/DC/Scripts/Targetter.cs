@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO: Allow enemy to shoot player
+
 public class Targetter : MonoBehaviour
 {
     private Target m_CurrentTarget = null;
