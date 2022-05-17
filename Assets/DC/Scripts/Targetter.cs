@@ -56,7 +56,6 @@ public class Targetter : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, _lookDir, 5 * Time.deltaTime);
 
                 m_UnitController.ClearDestination();
-                //TODO: Attack
                 if (m_ProjectileSpawnTimer < 0)
                 {
                     Instantiate(m_ProjectilePrefab, m_ProjectileSpawn.position, m_ProjectileSpawn.rotation);

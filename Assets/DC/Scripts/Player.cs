@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO: Allow player to buy ships with resources.
+
 public class Player : MonoBehaviour
 {
     private PlayerData m_PlayerData;
