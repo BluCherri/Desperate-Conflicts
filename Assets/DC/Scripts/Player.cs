@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         m_PlayerData = new PlayerData();
+        AddResources(50);
         m_Instance = this;
     }
 

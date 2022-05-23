@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 7045230262726216152}
   - component: {fileID: 1295743753685804627}
   - component: {fileID: 918070633}
+  - component: {fileID: 2360217868669856696}
   m_Layer: 0
   m_Name: carrier (SF)
   m_TagString: Untagged
@@ -257,3 +258,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!208 &2360217868669856696
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5004190702931270846}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.49650314, y: 0.28298306, z: 1.15}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0.00285548, y: 0.3857806, z: -0.06}
+  m_TimeToStationary: 0.5

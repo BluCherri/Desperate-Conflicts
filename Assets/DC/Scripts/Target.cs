@@ -14,7 +14,6 @@ public class Target : MonoBehaviour
 
     public void DealDamage(ushort value)
     {
-        Debug.Log("Hit " + gameObject.name);
         if (m_Health <= value)
         {
             //TODO: Create Destroy Effect, hide mesh, and set countdown till destroyed

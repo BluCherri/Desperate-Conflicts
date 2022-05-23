@@ -65,6 +65,10 @@ public class PlayerInput : MonoBehaviour
 
         foreach (UnitController controller in m_SelectedUnits)
         {
+            if (controller == null)
+            {
+                m_SelectedUnits.Remove(controller);
+            }
             controller.ClearDestination();
             controller.GetComponent<Targetter>().ClearTarget();
             if (target != null)

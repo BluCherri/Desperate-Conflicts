@@ -17,7 +17,7 @@ public class UIHandler : MonoBehaviour
         if (res >= m_StarFigherCost)
         {
             player.RemoveResources(m_StarFigherCost);
-            Instantiate(m_StarFighterPrefab, Vector3.zero, Quaternion.identity);
+            Instantiate(m_StarFighterPrefab, new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f)), Quaternion.identity);
         }
     }
 }

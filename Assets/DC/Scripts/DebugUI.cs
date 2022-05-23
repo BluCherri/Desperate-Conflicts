@@ -28,6 +28,11 @@ public class DebugUI : MonoBehaviour
         GUILayout.EndVertical();
     }
 
+    private void Update()
+    {
+        UpdateValues();
+    }
+
     private void UpdateValues()
     {
         m_ResourcesValue = m_Player.GetResources();

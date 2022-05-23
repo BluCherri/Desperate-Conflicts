@@ -90,6 +90,10 @@ public class Targetter : MonoBehaviour
                     m_ProjectileSpawnTimer = m_ProjectileSpawnTimerStart;
                 }
             }
+            else
+            {
+                if (m_IsEnemy) { m_CurrentTarget = null; }
+            }
         }
 
     }
