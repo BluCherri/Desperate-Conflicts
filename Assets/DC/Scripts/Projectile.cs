@@ -28,10 +28,9 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.collider.TryGetComponent<Target>(out Target target))
         {
-            if (target.TryGetComponent<UnitController>(out UnitController controller)) { return; }
-
             target.DealDamage(m_Damage);
             Destroy(gameObject);
         }
