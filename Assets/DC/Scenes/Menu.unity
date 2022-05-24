@@ -669,6 +669,7 @@ MonoBehaviour:
   m_GraphicsQualityDropdown: {fileID: 1365886696}
   m_ResolutionDropdown: {fileID: 563920929}
   m_FullscreenToggle: {fileID: 732555691}
+  m_DisplayOptions: {fileID: 222882059}
 --- !u!1 &184306049
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,8 +27,15 @@ public class SettingsMenu : MonoBehaviour
 
     private Resolution[] m_Resolutions;
 
+    [SerializeField]
+    private GameObject m_DisplayOptions = null;
+
     private void Start()
     {
+#if UNITY_WEBGL || UNITY_ANDROID || UNITY_IOS
+        m_DisplayOptions.SetActive(false);
+#endif
+
         m_GraphicsQualityDropdown.value = QualitySettings.GetQualityLevel();
         m_GraphicsQualityDropdown.RefreshShownValue();
 
