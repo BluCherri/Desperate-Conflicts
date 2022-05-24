@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 1293887012797103897}
   - component: {fileID: 8829138818264982763}
   - component: {fileID: 8314568306421105320}
+  - component: {fileID: 4294747863959839513}
   - component: {fileID: 7045230262726216152}
   - component: {fileID: 1295743753685804627}
   - component: {fileID: 918070633}
@@ -199,6 +200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LookAtPoint: {fileID: 3315783576074087745}
   m_Health: 2000
+  m_DestroySFX: {fileID: 5752398524579971364, guid: f33be4237b3d1e54f8903057c85d1fcf,
+    type: 3}
 --- !u!114 &8314568306421105320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +219,19 @@ MonoBehaviour:
     type: 3}
   m_ProjectileSpawn: {fileID: 4813053341328201482}
   m_ProjectileSpawnTimerStart: 1
+--- !u!114 &4294747863959839513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5004190702931270846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef117e3d61d704b99e9552e83944d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ResourceValue: 40
 --- !u!65 &7045230262726216152
 BoxCollider:
   m_ObjectHideFlags: 0

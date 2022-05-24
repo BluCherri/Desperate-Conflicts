@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1126293011223691019}
+  - component: {fileID: 8490481528195465712}
   - component: {fileID: 1126293011223691018}
   - component: {fileID: 1126293011223691017}
   - component: {fileID: 1126293011223691016}
@@ -38,6 +39,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8490481528195465712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126293011223691023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9cd803aff47384094cc433239ddfb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1126293011223691018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81,6 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LookAtPoint: {fileID: 1126293011223691019}
   m_Health: 5000
+  m_DestroySFX: {fileID: 5752398524579971364, guid: f33be4237b3d1e54f8903057c85d1fcf,
+    type: 3}
 --- !u!114 &531390233076056699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ef117e3d61d704b99e9552e83944d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ResourceValue: 500
+  m_ResourceValue: 100
 --- !u!208 &3846237466672807128
 NavMeshObstacle:
   m_ObjectHideFlags: 0

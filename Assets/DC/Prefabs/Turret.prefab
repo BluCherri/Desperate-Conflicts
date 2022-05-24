@@ -429,6 +429,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LookAtPoint: {fileID: 2800543896313399500}
   m_Health: 400
+  m_DestroySFX: {fileID: 5752398524579971364, guid: f33be4237b3d1e54f8903057c85d1fcf,
+    type: 3}
 --- !u!114 &7734935550513983915
 MonoBehaviour:
   m_ObjectHideFlags: 0
