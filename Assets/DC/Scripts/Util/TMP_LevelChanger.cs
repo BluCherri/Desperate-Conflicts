@@ -6,6 +6,7 @@ public class TMP_LevelChanger : MonoBehaviour
 {
     private void OnDestroy()
     {
+        Player.Instance.GetComponent<PlayerInput>().RemoveAllUnits();
         SceneLoader.Next();
     }
 }

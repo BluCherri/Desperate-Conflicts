@@ -13,6 +13,9 @@ public class MainMenu : MonoBehaviour
     private Button m_ExitButton = null;
 #pragma warning restore CS0414
 
+    [SerializeField]
+    private GameObject m_PlayerPrefab = null;
+
     private void Start()
     {
 #if UNITY_WEBGL || UNITY_ANDROID || UNITY_IOS
@@ -22,6 +25,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnPlayButtonClicked()
     {
+        Instantiate(m_PlayerPrefab, Vector3.zero, Quaternion.identity);
         SceneLoader.Load(SCENES.MAP01);
     }
 

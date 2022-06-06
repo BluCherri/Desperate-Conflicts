@@ -15,6 +15,16 @@ public class PlayerInput : MonoBehaviour
     private List<UnitController> m_SelectedUnits = new List<UnitController>();
     private Vector2 m_DragStartPos;
 
+    public void RemoveUnit(UnitController controller)
+    {
+        if (m_SelectedUnits.Contains(controller)) { m_SelectedUnits.Remove(controller); }
+    }
+
+    public void RemoveAllUnits()
+    {
+        m_SelectedUnits.Clear();
+    }
+
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
@@ -27,6 +37,15 @@ public class PlayerInput : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
         m_MainCamera = Camera.main;
+
+        if (level == (int)SCENES.TMP_END || level == (int)SCENES.MENU)
+        {
+            Player.Instance.HideGameUI();
+        }
+        else
+        {
+            Player.Instance.ShowGameUI();
+        }
     }
 
     /// <summary>
@@ -50,6 +69,11 @@ public class PlayerInput : MonoBehaviour
         {
             SetUnitTarget();
         }
+
+        if (Player.Instance.GetResources() == 0 && m_SelectedUnits.Count == 0 && SceneLoader.GetCurrentScene() != SCENES.MENU && SceneLoader.GetCurrentScene() != SCENES.TMP_END)
+        {
+            // They lost
+        }
     }
 
     private void SetUnitTarget()
@@ -70,10 +94,6 @@ public class PlayerInput : MonoBehaviour
 
         foreach (UnitController controller in m_SelectedUnits)
         {
-            if (controller == null)
-            {
-                m_SelectedUnits.Remove(controller);
-            }
             controller.ClearDestination();
             controller.GetComponent<Targetter>().ClearTarget();
             if (target != null)

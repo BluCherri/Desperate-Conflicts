@@ -16,4 +16,9 @@ public static class SceneLoader
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public static SCENES GetCurrentScene()
+    {
+        return (SCENES)SceneManager.GetActiveScene().buildIndex;
+    }
 }

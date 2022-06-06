@@ -59,5 +59,10 @@ public class UnitController : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        FindObjectOfType<PlayerInput>().RemoveUnit(this);
+    }
+
     #endregion
 }
