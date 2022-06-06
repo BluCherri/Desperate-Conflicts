@@ -70,9 +70,9 @@ public class PlayerInput : MonoBehaviour
             SetUnitTarget();
         }
 
-        if (Player.Instance.GetResources() == 0 && m_SelectedUnits.Count == 0 && SceneLoader.GetCurrentScene() != SCENES.MENU && SceneLoader.GetCurrentScene() != SCENES.TMP_END)
+        if (Player.Instance.GetResources() == 0 && m_SelectedUnits.Count == 0 && SceneLoader.GetCurrentScene() != SCENES.MENU && SceneLoader.GetCurrentScene() != SCENES.TMP_END && FindObjectsOfType<UnitController>().Length == 0)
         {
-            // They lost
+            SceneLoader.Load(SCENES.TMP_LOSE);
         }
     }
 

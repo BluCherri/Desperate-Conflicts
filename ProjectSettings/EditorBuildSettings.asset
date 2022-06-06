@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DC/Scenes/TMP_End.unity
     guid: 0cec498c7fc4b754794f95b02a671ad7
+  - enabled: 1
+    path: Assets/DC/Scenes/TMP_Lose.unity
+    guid: 270e8a0d9e907cb4e95dede260ae06b0
   m_configObjects: {}

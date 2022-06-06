@@ -35,15 +35,18 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        m_PlayerData = new PlayerData();
-        AddResources(50);
         if (Instance != null)
         {
             Debug.LogWarning("Another player already exists!");
             Destroy(gameObject);
         }
-        m_Instance = this;
-        DontDestroyOnLoad(gameObject);
+        else
+        {
+            m_PlayerData = new PlayerData();
+            AddResources(50);
+            m_Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void ResetResources()
