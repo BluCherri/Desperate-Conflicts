@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        SceneLoader.RegisterCallbacks();
+
 #if UNITY_WEBGL || UNITY_ANDROID || UNITY_IOS
         m_ExitButton.gameObject.SetActive(false);
 #endif
