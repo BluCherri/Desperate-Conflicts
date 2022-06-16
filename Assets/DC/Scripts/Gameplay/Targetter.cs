@@ -7,6 +7,9 @@ public class Targetter : MonoBehaviour
     [SerializeField]
     private bool m_IsEnemy = false;
 
+    [SerializeField]
+    private float m_EnemyFiringDistance = 0.5f;
+
     private Target m_CurrentTarget = null;
     public Target CurrentTarget { get => m_CurrentTarget; }
 
@@ -73,7 +76,7 @@ public class Targetter : MonoBehaviour
             }
         }
 
-        float dis = (m_IsEnemy ? 0.5f : m_UnitController.MaxDistanceToTarget);
+        float dis = (m_IsEnemy ? m_EnemyFiringDistance : m_UnitController.MaxDistanceToTarget);
 
         if (m_CurrentTarget != null)
         {

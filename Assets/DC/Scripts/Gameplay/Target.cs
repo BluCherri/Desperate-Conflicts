@@ -21,6 +21,7 @@ public class Target : MonoBehaviour
         {
             //TODO: Create Destroy Effect, hide mesh, and set countdown till destroyed
             Instantiate(m_DestroySFX, transform.position, transform.rotation);
+            LevelTarget.instance.TryRemoveShip(gameObject);
             Destroy(gameObject);
         }
         else
