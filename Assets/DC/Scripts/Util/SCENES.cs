@@ -5,6 +5,7 @@ public enum SCENES : int
     MAP02,
     MAP03,
     MAP04,
+    MAP05,
     TMP_END,
     TMP_LOSE
 }
